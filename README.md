@@ -1,3 +1,2 @@
 # study
-
-test var_勉強用
+勉強用
