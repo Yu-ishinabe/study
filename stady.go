@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-
-	"./animals"
 )
 
 func main() {
@@ -17,10 +15,4 @@ func main() {
 	} else {
 		fmt.Println("小さい", a[0][1])
 	}
-
-	// 構造確認
-	fmt.Println(animals.ElephantFeed())
-	fmt.Println(animals.MonkeyFeed())
-	fmt.Println(animals.RabbitFeed())
-	fmt.Println(animals.HumanFeed())
 }
