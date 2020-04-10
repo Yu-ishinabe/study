@@ -23,7 +23,7 @@ func TestMonkeyFeed(t *testing.T) {
 }
 
 func TestRabbitFeed(t *testing.T) {
-	expect := "Grass"
+	expect := "Carrot"
 	actual := RabbitFeed()
 
 	if expect != actual {
