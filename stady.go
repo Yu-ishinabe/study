@@ -14,7 +14,6 @@ var (
 	plusAlias = plus
 )
 
-// type で Servant型を定義 何回も同じ内容を利用するなら type記載
 type Servant = struct {
 	name  string
 	class string
