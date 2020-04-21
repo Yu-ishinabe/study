@@ -1,26 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "<!DOCTYPE html>")
-	fmt.Fprintln(w, "<html lang='ja'>")
-	fmt.Fprintln(w, "<head>")
-	fmt.Fprintln(w, "<meta charset='UTF-8'>")
-	fmt.Fprintln(w, "<title>TITLE</title>")
-	fmt.Fprintln(w, "</head>")
-	fmt.Fprintln(w, "<body>")
-	fmt.Fprintln(w, "<h1>hello GO!</h1>")
-	fmt.Fprintln(w, "</body>")
-	fmt.Fprintln(w, "</html>")
+	t, _ := template.ParseFiles("sample.html")
+	t.Execute(w, nil)
 }
 
 func main() {
-	http.HandleFunc("/", home)
+	http.HandleFunc("/sample", home)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("ListenAndServe failed.", err)
 	}
