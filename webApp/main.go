@@ -1,8 +1,8 @@
 package main
 
-impot (
-	"net/http"
+import (
 	"fmt"
+	"net/http"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
