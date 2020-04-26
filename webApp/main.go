@@ -4,11 +4,21 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"time"
 )
+
+type Greeting struct {
+	Message string
+	Time    time.Time
+}
 
 func home(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("template/sample.html")
-	t.Execute(w, nil)
+	m := Greeting{
+		Message: "Hello Go lang!",
+		Time:    time.Now(),
+	}
+	t.Execute(w, m)
 }
 
 func main() {
