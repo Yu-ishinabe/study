@@ -5,3 +5,33 @@ h1 {
 	  border-left: 10px solid #31a9ee;
   	border-bottom: 1px dashed #31a9ee;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  text-align: center;
+}
+#mainCanvas {
+  background: white;
+  border: 1px solid black;
+}
+#controlPanel {
+  width: 100%;
+  border: 1px solid black;
+}
+select {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+}
+#calcBtn {
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+}
